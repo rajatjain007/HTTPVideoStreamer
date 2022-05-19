@@ -1,2 +1,3 @@
-# HTTPVideoStreamer
-HTTP Video streaming app in Node.Js
+# VideoStreamer
+
+HTTP Video streaming app.

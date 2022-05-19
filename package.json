@@ -1,0 +1,24 @@
+{
+  "name": "videostreamer",
+  "version": "1.0.0",
+  "description": "Video streaming app using Node Media Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajatjain007/VideoStreamer.git"
+  },
+  "author": "Rajat M. Jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajatjain007/VideoStreamer/issues"
+  },
+  "homepage": "https://github.com/rajatjain007/VideoStreamer#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}
