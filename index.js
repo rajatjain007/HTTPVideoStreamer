@@ -2,8 +2,12 @@ const express = require("express");
 const app = express();
 const fs = require("fs");
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
+app.get("/httpVP", (req, res) => {
+  res.sendFile(__dirname + "/httpVP.html");
+});
+
+app.get("/dashVP", (req, res) => {
+  res.sendFile(__dirname + "/dashVP.html");
 });
 
 app.get("/video", (req, res) => {

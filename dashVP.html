@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Adaptive Streaming using DASH.js player</title>
+    <style>
+      body {
+        margin: 40px auto;
+        max-width: 650px;
+        line-height: 1.6;
+        font-size: 18px;
+        font-family: "Courier New", Courier, monospace;
+        color: #444;
+        padding: 0 10px;
+      }
+      h2 {
+        line-height: 1.2;
+      }
+    </style>
+  </head>
+    <h2>Adaptive Streaming using DASH.js Video player</h2>
+    <p>This video is being streamed instead of downloaded.</p>
+    <p>
+      Feel free to seek through the video and it only loads the part you want to
+      watch
+    </p>
+    <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+      <source src="/video" type="video/mp4" />
+    </video>
+    <i>Big Buck Bunny</i>
+  </body>
+  <!-- DASH-AVC/265 reference implementation -->
+  <script src="./node_modules/dashjs/dist/dash.all.min.js"></script>
+  <script>
+    // setup the video element and attach it to the Dash player
+    function setupVideo() {
+      var url =
+        "http://wams.edgesuite.net/media/MPTExpressionData02/BigBuckBunny_1080p24_IYUV_2ch.ism/manifest(format=mpd-time-csf)";
+      var context = new Dash.di.DashContext();
+      var player = new MediaPlayer(context);
+      player.startup();
+      player.attachView(document.querySelector("#videoplayer"));
+      player.attachSource(url);
+    }
+  </script>
+</html>
